@@ -1,4 +1,5 @@
-inventario={}
+#comentario
+# inventario={}
 while True:
 	print("Bienvenidos al aCuenta :V")
 	print("1. Agregar Producto")
