@@ -1,3 +1,4 @@
+#comentario
 inventario={}
 while True:
 	print("Bienvenidos al aCuenta :V")
