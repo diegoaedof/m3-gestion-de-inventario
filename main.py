@@ -1,13 +1,4 @@
-# comment
-def agregar_producto(inventario):
-    nombre = input(f"Ingrese el nombre del producto:\n").lower().strip()
-    categoria = input("Ingrese la categoria del producto:\n").lower().strip()
-    cantidad = int(input("Ingrese la cantidad del producto:\n"))
-    precio = int(input("Ingrese el precio del producto:\n"))
-	
-    inventario[nombre] = (categoria, cantidad, precio)
-	
-
+#comentario
 inventario={}
 while True:
 	print("Bienvenidos al aCuenta :V")
