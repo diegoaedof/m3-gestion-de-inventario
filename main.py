@@ -20,7 +20,7 @@ def buscar_productos(inventario):
             break
         else:
             print("Seleccione una opcion correcta")
-
+# NUNCA MAS 
 
 inventario={}
 while True:
