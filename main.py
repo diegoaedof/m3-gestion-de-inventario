@@ -20,7 +20,9 @@ def buscar_productos(inventario):
             break
         else:
             print("Seleccione una opcion correcta")
-#Esto es un conflicto
+
+# NUNCA MAS 
+
 
 inventario={}
 while True:
