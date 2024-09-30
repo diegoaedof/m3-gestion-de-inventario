@@ -8,18 +8,22 @@ def agregar_producto(inventario):
     inventario[nombre] = (categoria, cantidad, precio)
 	
 def buscar_productos(inventario):
-    while True:
-        print("Favor seleccionar que opcion desea buscar N° 1 Nombre, N°2 Categoria o N°3 Salir")
-        valor = int(input("Ingrese numero que corresponda:\n"))
-        if valor==1:
-            pass
-        elif valor==2:
-            pass
-        elif valor==3:
-            print("3. Salir")
-            break
-        else:
-            print("Seleccione una opcion correcta")
+	while True:
+		print("Favor seleccionar que opcion desea buscar N° 1 Nombre, N°2 Categoria o N°3 Salir")
+		valor = int(input("Ingrese numero que corresponda:\n"))
+		if valor==1:
+			nombre_producto = input("Indique el nombre del producto que va a buscar: ")
+			if nombre_producto in inventario.keys():
+				print(f"El producto {nombre_producto} pertenece a la categoria de {inventario[nombre_producto][0]}, su cantidad actual es de {inventario[nombre_producto][1]} y su precio es de {inventario[nombre_producto][2]}")
+			else:
+				print("El producto no existe en el inventario")
+		elif valor==2:
+			pass
+		elif valor==3:
+			print("3. Salir")
+			break
+		else:
+			print("Seleccione una opcion correcta")
 
 # NUNCA MAS 
 
