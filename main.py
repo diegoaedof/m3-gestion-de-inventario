@@ -4,9 +4,8 @@ def agregar_producto(inventario):
     categoria = input("Ingrese la categoria del producto:\n").lower().strip()
     cantidad = int(input("Ingrese la cantidad del producto:\n"))
     precio = int(input("Ingrese el precio del producto:\n"))
-	
     inventario[nombre] = (categoria, cantidad, precio)
-	
+
 def buscar_productos(inventario):
     while True:
         print("Favor seleccionar que opcion desea buscar N° 1 Nombre, N°2 Categoria o N°3 Salir")
@@ -52,6 +51,27 @@ def actualizar_inventario(inventario):
 		print("El producto no existe en el inventario")
 			
 
+def eliminar_producto(inventario):
+    producto = input("Ingrese el nombre del producto que desea eliminar:").strip().lower()
+    if producto in inventario.keys():
+        del inventario[producto]
+        print("El producto fue eliminado exitosamente.")
+    else:
+        print("El producto ingresado no existe en el inventario")
+
+def mostrar_inventario(inventario):
+    print("LISTA DE PRODUCTOS")
+    contador = 0
+    for producto, detalle in inventario.items():
+        print(f"{producto}:")
+        print(f"- Categoría: {detalle[0]}")
+        print(f"- Cantidad: {detalle[1]}")
+        print(f"- Precio: {detalle[2]}")
+        print("----------------------")
+        contador += 1
+    
+    if contador == 0:
+        print("El inventario está vacío.\n")
 
 
 
@@ -72,15 +92,15 @@ while True:
 	opcion=input("Ingrese su opción: ")
 
 	if opcion=="1":
-		producto=input("Ingrese el producto: ")
+		agregar_producto(inventario)
 	elif opcion=="2":
-		pass
+		buscar_productos(inventario)
 	elif opcion=="3":
-		pass
+		actualizar_inventario(inventario)
 	elif opcion=="4":
-		pass
+		eliminar_producto(inventario)
 	elif opcion=="5":
-		pass
+		mostrar_inventario(inventario)
 	elif opcion=="6":
 		break
 	else:
