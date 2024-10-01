@@ -21,7 +21,7 @@ def buscar_productos(inventario):
         #----> BUSQUEDA POR CATEGORIA <----
         elif valor==2:
             categoria = input ("Ingrese la categoria del Producto").strip().lower()
-            auxiliar = 0
+            auxiliar = 0 #contador para verificar si existen productos con esa categoría
             
             for producto, detalle in inventario.items():
                 if detalle[0] == categoria:
