@@ -36,7 +36,27 @@ def buscar_productos(inventario):
         else:
             print("Seleccione una opcion correcta")
 
-# NUNCA MAS 
+        #---->ACTUALIZAR INVENTARIO<----
+        
+def actualizar_inventario(inventario):
+	nombre_producto = input("Indique el nombre del producto que va a actualizar: ").strip().lower()
+	if nombre_producto in inventario.keys():
+		print(f"El producto {nombre_producto} actualmente tiene un stock de: {inventario[nombre_producto][1]}")
+		nueva_cantidad=int(input("Ingrese la cantidad actualizada"))
+		lista_detalles=list(inventario[nombre_producto])
+		lista_detalles[1]=nueva_cantidad
+		inventario[nombre_producto] = tuple(lista_detalles)
+		print("La cantidad de producto ha sido actualizada.")
+		
+	else:
+		print("El producto no existe en el inventario")
+			
+
+
+
+
+
+# NEVER AGAIN 
 
 
 inventario={}
