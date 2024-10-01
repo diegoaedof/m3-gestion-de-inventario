@@ -18,7 +18,7 @@ def buscar_productos(inventario):
             else:
                 print("El producto no existe en el inventario")
                 
-        #---->BUSQUEDA POR CATEGORIA<----
+        #----> BUSQUEDA POR CATEGORIA <----
         elif valor==2:
             categoria = input ("Ingrese la categoria del Producto").strip().lower()
             auxiliar = 0
